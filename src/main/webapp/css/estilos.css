@@ -1,0 +1,179 @@
+@charset "ISO-8859-1";
+
+h1 {
+    text-align: center;
+    font-family: Comic Sans MS;
+    font-size: 20px;
+    color: white; 
+    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14;
+}
+
+h5 {
+	color: red;
+	text-align: center;
+	font-family: Arial;
+	font-size: 15px;
+}
+
+.destacado {
+	font-weight: bold;
+	color: black;
+	text-align: center;
+	margin-top: 25px;
+}
+
+.title {
+	color: green;
+	font-size: 25px;
+}
+
+.titulo {
+	color: red;
+	font-size: 20px;
+}
+
+p {
+	font-family: Times New Roman;
+	font-size: 20px;
+	text-align: justify;
+}
+
+h4 {
+	font-family: Arial;
+	font-size: 13px;
+	text-align: left;
+}
+
+header, nav, article, footer{
+	border: 1px solid black;
+	display: block;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+}
+
+header.banner {
+    background-color: rgb(135, 206, 235);
+    padding: 20px 10px;
+    margin: 0;
+    width: auto;
+    height: auto;
+    background-image: url('Fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+}
+
+.contenido {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section { 
+	width: 1000px;
+    float: left;
+}
+
+img {
+	width: 600px;
+    display: block;
+    margin: 0 auto;
+}
+
+aside {
+    padding: 30px;
+    width: 200px;
+    float: right;
+    align-items: center;
+}
+
+footer {
+    overflow: hidden;
+    background-color: rgb(144, 238, 144);
+    padding: 20px 10px;
+    text-align: center;
+    clear:both;
+    width: auto; 
+}
+
+form {
+  margin: 0 auto;
+  width: 17%; 
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end; 
+    overflow: hidden;
+    background-color: rgb(144, 238, 144);
+    padding: 10px 5px;
+}
+
+nav a {
+    color: black;
+    text-align: center;
+    padding: 12px;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ffff80;
+    border: 1px solid gray;
+    color: black;
+}
+
+nav a.active {
+    background-color: dodgerblue;
+    border: 1px solid gray;
+    color: white;
+}
+
+
+
+footer li{
+    list-style: none;
+    font:bold 14px verdana;
+    padding: 10px;
+    display: inline-block;
+}
+
+.boton-enlace {
+	display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ffff80;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.boton-enlace:hover {
+	background-color: #80ffff;
+}
+
+.social ul {
+	list-style: none;
+    display: flex; 
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.social li {
+	margin-right: 10px;
+}
+
+.social li a {
+	color: black; 
+}
+
+

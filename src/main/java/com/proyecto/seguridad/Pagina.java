@@ -1,0 +1,57 @@
+package com.proyecto.seguridad;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.proyecto.datos.*;
+
+public class Pagina {
+	private String descripcion;
+	private String path;
+
+
+	public Pagina() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+	
+	public String mostrarMenu(int nperfil)
+	{
+	String menu="<ul>";
+	String sql="SELECT * FROM tb_pagina pag, tb_perfil per, \"tb_perfilpagina\" pper "
+	+
+	"WHERE pag.id_pag=pper.id_pag AND pper.id_per=per.id_per AND pper.id_per= "+nperfil;
+	Conexion con = new Conexion();
+	ResultSet rs=null;
+	try
+	{
+	rs=con.Consulta(sql);
+	while(rs.next())
+	{
+	menu+="<a class='boton-enlace' href="+rs.getString(3)+" accesskey="+rs.getInt(1)+">"+rs.getString(2)+
+	"</A>";
+	}
+	menu+="</ul><br>";
+	}
+	catch(SQLException e)
+	{
+		System.out.print(e.getMessage());
+	}
+	return menu;
+	}	
+}
